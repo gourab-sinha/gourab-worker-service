@@ -1,4 +1,4 @@
-const { AbstractQueueClass } = require('../classes/AbstractQueue');
+const AbstractQueueClass  = require('../classes/AbstractQueue');
 /**
  * @class
  * @extends {AbstractQueueClass}

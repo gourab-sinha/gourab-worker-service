@@ -1,4 +1,4 @@
-const { AbstractQueueClass } = require('../classes/AbstractQueue');
+const AbstractQueueClass = require('../classes/AbstractQueue');
 
 /**
  * @class
@@ -6,6 +6,7 @@ const { AbstractQueueClass } = require('../classes/AbstractQueue');
  */
 class ConsumerWorker extends AbstractQueueClass {
     constructor(bull) {
+        super();
         if (Object.getPrototypeOf(this).isInstantiated) {
             throw new Error(`Cannot create more than one instance of ${this.constructor.name}!`);
         }
