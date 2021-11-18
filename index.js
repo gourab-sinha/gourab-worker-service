@@ -1,2 +1,2 @@
-module.exports = require('./consumer');
-module.exports = require('./producer');
+module.exports = require('./consumer/Consumer');
+module.exports = require('./producer/Producer');
