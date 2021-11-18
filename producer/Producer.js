@@ -3,7 +3,7 @@ const { AbstractQueueClass } = require('../classes/AbstractQueue');
  * @class
  * @extends {AbstractQueueClass}
  */
-export class ProducerWorker extends AbstractQueueClass {
+class ProducerWorker extends AbstractQueueClass {
     constructor(bull) {
         if (Object.getPrototypeOf(this).isInstantiated) {
             throw new Error(`Cannot create more than one instance of ${this.constructor.name}!`);
@@ -36,3 +36,5 @@ export class ProducerWorker extends AbstractQueueClass {
         }
     }
 }
+
+module.exports = ProducerWorker;

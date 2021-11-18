@@ -1,6 +1,3 @@
-const Bull = require('bull');
-const Redis = require('redis');
-
 /**
  * @class
  */
