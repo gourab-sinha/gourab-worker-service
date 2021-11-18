@@ -1,4 +1,4 @@
-import { AbstractQueueClass } from "../classes/AbstractQueue";
+const { AbstractQueueClass } = require('../classes/AbstractQueue');
 
 /**
  * @class
