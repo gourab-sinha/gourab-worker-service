@@ -2,7 +2,7 @@
  * @class
  */
 
-export class AbstractQueueClass {
+class AbstractQueueClass {
     constructor() {
         if (this.constructor === AbstractQueueClass || Object.getPrototypeOf(this.constructor) === AbstractClass) {
             throw new Error('Cannot instantiate Abstract Class!');
@@ -86,5 +86,7 @@ export class AbstractQueueClass {
             `Job in ${job.queue.name} stalled for: ${job.id}`
         );
     }
-};
+}
+
+module.exports = AbstractQueueClass;
 
