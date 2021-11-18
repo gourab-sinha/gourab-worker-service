@@ -6,9 +6,6 @@ const Redis = require('redis');
  */
 
 export class AbstractQueueClass {
-    bull = Bull;
-    redis = Redis;
-    queues = {};
     constructor() {
         if (this.constructor === AbstractQueueClass || Object.getPrototypeOf(this.constructor) === AbstractClass) {
             throw new Error('Cannot instantiate Abstract Class!');
@@ -37,11 +34,6 @@ export class AbstractQueueClass {
         this.queues[queueName].on('stalled', this.handlerStalled);
     }
 
-    /**
-     * 
-     * @param {*} redisOptions 
-     */
-    async createRedisConnection(redisOptions);
     /**
      * 
      * @param {*} queueName 

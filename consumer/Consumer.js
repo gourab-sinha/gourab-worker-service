@@ -1,7 +1,7 @@
 import { AbstractQueueClass } from "../classes/AbstractQueue";
 
 export class ConsumerWorker extends AbstractQueueClass {
-    constructor() {
+    constructor(bull) {
         if (Object.getPrototypeOf(this).isInstantiated) {
             throw new Error(`Cannot create more than one instance of ${this.constructor.name}!`);
         }
@@ -15,6 +15,7 @@ export class ConsumerWorker extends AbstractQueueClass {
             configurable: false
         });
         this.queues = {};
+        this.bull = bull;
     }
     
     /**
