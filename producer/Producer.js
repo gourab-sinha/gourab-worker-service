@@ -1,5 +1,8 @@
 import { AbstractQueueClass } from "../classes/AbstractQueue";
-
+/**
+ * @class
+ * @extends {AbstractQueueClass}
+ */
 export class ProducerWorker extends AbstractQueueClass {
     constructor(bull) {
         if (Object.getPrototypeOf(this).isInstantiated) {
