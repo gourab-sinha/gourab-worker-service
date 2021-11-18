@@ -3,7 +3,7 @@ This a worker service
 
 # Installation
 
-`npm i worker-service-gourab --save`
+`npm i gourab-worker-service --save`
 
  Then...
 
